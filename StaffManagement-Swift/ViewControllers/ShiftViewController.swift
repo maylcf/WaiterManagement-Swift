@@ -44,6 +44,32 @@ class ShiftViewController: UITableViewController
         
         return UITableViewCell()
     }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if (editingStyle == UITableViewCellEditingStyle.delete)
+        {
+            if let waiter = self.waiter
+            {
+                if shifts.count > 0
+                {
+                    let shift = shifts[indexPath.row]
+                    
+                    let deleteShift = ShiftManager.delete(waiter: waiter, shift: shift)
+                    
+                    if deleteShift.error
+                    {
+                        MessageManager.displayErrorMessage(vc: self, message: deleteShift.message)
+                    }
+                    else
+                    {
+                        MessageManager.displaySimpleMessage(vc: self, title: nil, message: deleteShift.message)
+                        self.updateTable()
+                    }
+                }
+            }
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
@@ -65,11 +91,8 @@ class ShiftViewController: UITableViewController
             
             if let allShifs = result
             {
-                if allShifs.count > 0
-                {
-                    self.shifts = allShifs
-                    self.tableView.reloadData()
-                }
+                self.shifts = allShifs
+                self.tableView.reloadData()
             }
         }
     }

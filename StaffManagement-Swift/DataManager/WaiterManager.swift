@@ -11,23 +11,24 @@ import CoreData
 
 class WaiterManager
 {
-    // Add a new restaurant
-    public class func addWaiter(name: String) -> Bool
+    // Add waiter
+    public class func addWaiter(name: String) -> ReturnObject
     {
         if (!checkWaiter(name: name))
         {
             let newWaiter = Waiter(context: PersistenceService.context)
             newWaiter.name = name
             PersistenceService.saveContext()
-            return true
+            return ReturnObject(message: "Waiter saved successfully!", error: false)
         }
         else
         {
-            return false
+            return ReturnObject(message: "This Waiter already exists", error: true)
         }
     }
     
-    public class func delete(name: String) -> Bool
+    // delete a waiter
+    public class func delete(name: String) -> ReturnObject
     {
         let fetchRequest: NSFetchRequest<Waiter> = Waiter.fetchRequest()
         let predicate = NSPredicate(format: "self.name = %@", name)
@@ -40,19 +41,25 @@ class WaiterManager
             for waiter in result
             {
                 // Delete Shifts
-                if ShiftManager.deleteAll(waiter: waiter)
+                let deleteShifts: ReturnObject = ShiftManager.deleteAll(waiter: waiter)
+                
+                // Delete Waiter
+                if !deleteShifts.error
                 {
-                    // Delete Waiter
                     PersistenceService.context.delete(waiter)
                     PersistenceService.saveContext()
                 }
+                else
+                {
+                    return ReturnObject(message: "Error removing waiter's shifts", error: true)
+                }
             }
             
-            return true
+            return ReturnObject(message: "Waiter removed successfully!", error: false)
         }
         catch
         {
-            return false
+            return ReturnObject(message: "Error removing waiter.", error: true)
         }
     }
     
@@ -65,11 +72,13 @@ class WaiterManager
         let predicate = NSPredicate(format: "self.name = %@", name)
         fetchRequest.predicate = predicate
         
-        do {
+        do
+        {
             let result = try PersistenceService.context.fetch(fetchRequest)
             exists = result.count == 0 ? false : true
         }
-        catch {
+        catch
+        {
             exists = false
         }
         

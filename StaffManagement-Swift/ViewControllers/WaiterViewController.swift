@@ -61,8 +61,17 @@ class WaiterViewController: UITableViewController {
             if waiters.count > 0
             {
                 let waiter = waiters[indexPath.row]
-                WaiterManager.delete(name: waiter.name!)
-                self.updateTable()
+                let deleteWaiter = WaiterManager.delete(name: waiter.name!)
+                
+                if deleteWaiter.error
+                {
+                    MessageManager.displayErrorMessage(vc: self, message: deleteWaiter.message)
+                }
+                else
+                {
+                    MessageManager.displaySimpleMessage(vc: self, title: nil, message: deleteWaiter.message)
+                    self.updateTable()
+                }
             }
         }
     }
@@ -103,7 +112,12 @@ class WaiterViewController: UITableViewController {
     {
         if (RestaurantManager.count() == 0)
         {
-            RestaurantManager.addRestaurant(restaurantName: "Mays's Burguer")
+            let addRestaurant = RestaurantManager.addRestaurant(restaurantName: "Mays's Burguer")
+            
+            if addRestaurant.error
+            {
+                MessageManager.displayErrorMessage(vc: self, message: addRestaurant.message)
+            }
         }
         
         if let restaurants = RestaurantManager.selectAll()

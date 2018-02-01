@@ -12,18 +12,18 @@ import CoreData
 class RestaurantManager
 {
     // Add a new restaurant
-    public class func addRestaurant(restaurantName: String) -> Bool
+    public class func addRestaurant(restaurantName: String) -> ReturnObject
     {
         if (!checkRestaurant(name: restaurantName))
         {
             let newRestaurant = Restaurant(context: PersistenceService.context)
             newRestaurant.name = restaurantName
             PersistenceService.saveContext()
-            return true
+            return ReturnObject(message: "Restaurant saved successfully!", error: false)
         }
         else
         {
-            return false
+            return ReturnObject(message: "Restaurant already exists", error: true)
         }
     }
     
