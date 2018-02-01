@@ -17,34 +17,35 @@ class WaiterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Check Restaurant
-        if (RestaurantManager.count() == 0)
-        {
-            RestaurantManager.addRestaurant(restaurantName: "Mays's Burguer")
-        }
-        
-        if let restaurants = RestaurantManager.selectAll()
-        {
-            restaurant = restaurants[0]
-        }
-        
-        print("Restaurant Name: \(restaurant.name!)")
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        // If no restaurant, add one
+        self.addRestaurant()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.updateTable()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return waiters.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if waiters.count > 0
+        {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "WaiterCell", for: indexPath)
+            let waiter = waiters[indexPath.row]
+            cell.textLabel?.text = waiter.name
+            return cell
+        }
+        
+        return UITableViewCell()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -58,13 +59,31 @@ class WaiterViewController: UITableViewController {
     
     func updateTable()
     {
-        var result = WaiterManager.selectAll()
+        let result = WaiterManager.selectAll()
         
-        if let allWaiters = result, result?.count > 0
+        if let allWaiters = result
         {
-            self.waiters = allWaiters
-            self.tableView.reloadData()
+            if allWaiters.count > 0
+            {
+                self.waiters = allWaiters
+                self.tableView.reloadData()
+            }
         }
+    }
+    
+    func addRestaurant()
+    {
+        if (RestaurantManager.count() == 0)
+        {
+            RestaurantManager.addRestaurant(restaurantName: "Mays's Burguer")
+        }
+        
+        if let restaurants = RestaurantManager.selectAll()
+        {
+            restaurant = restaurants[0]
+        }
+        
+        print("Restaurant Name: \(restaurant.name!)")
     }
 
 }
