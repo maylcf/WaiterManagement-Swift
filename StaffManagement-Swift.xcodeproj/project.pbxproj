@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E70AE8152020EF1B00143ACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AE8142020EF1B00143ACF /* AppDelegate.swift */; };
+		E70AE8172020EF1B00143ACF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AE8162020EF1B00143ACF /* ViewController.swift */; };
+		E70AE81A2020EF1B00143ACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70AE8182020EF1B00143ACF /* Main.storyboard */; };
+		E70AE81D2020EF1B00143ACF /* StaffManagement_Swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E70AE81B2020EF1B00143ACF /* StaffManagement_Swift.xcdatamodeld */; };
+		E70AE81F2020EF1B00143ACF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E70AE81E2020EF1B00143ACF /* Assets.xcassets */; };
+		E70AE8222020EF1B00143ACF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70AE8202020EF1B00143ACF /* LaunchScreen.storyboard */; };
+		E70AE82B2020F3EB00143ACF /* WaiterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AE82A2020F3EB00143ACF /* WaiterViewController.swift */; };
+		E70AE82D2020F3F600143ACF /* ShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AE82C2020F3F500143ACF /* ShiftViewController.swift */; };
+		E70AE82F2020F41400143ACF /* AddWaiterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AE82E2020F41400143ACF /* AddWaiterViewController.swift */; };
+		E70AE8312020F42000143ACF /* AddShitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AE8302020F42000143ACF /* AddShitViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E70AE8112020EF1B00143ACF /* StaffManagement-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StaffManagement-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E70AE8142020EF1B00143ACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E70AE8162020EF1B00143ACF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E70AE8192020EF1B00143ACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E70AE81C2020EF1B00143ACF /* StaffManagement_Swift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StaffManagement_Swift.xcdatamodel; sourceTree = "<group>"; };
+		E70AE81E2020EF1B00143ACF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E70AE8212020EF1B00143ACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E70AE8232020EF1B00143ACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E70AE82A2020F3EB00143ACF /* WaiterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaiterViewController.swift; sourceTree = "<group>"; };
+		E70AE82C2020F3F500143ACF /* ShiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftViewController.swift; sourceTree = "<group>"; };
+		E70AE82E2020F41400143ACF /* AddWaiterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWaiterViewController.swift; sourceTree = "<group>"; };
+		E70AE8302020F42000143ACF /* AddShitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShitViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E70AE80E2020EF1B00143ACF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E70AE8082020EF1B00143ACF = {
+			isa = PBXGroup;
+			children = (
+				E70AE8132020EF1B00143ACF /* StaffManagement-Swift */,
+				E70AE8122020EF1B00143ACF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E70AE8122020EF1B00143ACF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E70AE8112020EF1B00143ACF /* StaffManagement-Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E70AE8132020EF1B00143ACF /* StaffManagement-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				E70AE8292020F3D600143ACF /* ViewControllers */,
+				E70AE8142020EF1B00143ACF /* AppDelegate.swift */,
+				E70AE8162020EF1B00143ACF /* ViewController.swift */,
+				E70AE8182020EF1B00143ACF /* Main.storyboard */,
+				E70AE81E2020EF1B00143ACF /* Assets.xcassets */,
+				E70AE8202020EF1B00143ACF /* LaunchScreen.storyboard */,
+				E70AE8232020EF1B00143ACF /* Info.plist */,
+				E70AE81B2020EF1B00143ACF /* StaffManagement_Swift.xcdatamodeld */,
+			);
+			path = "StaffManagement-Swift";
+			sourceTree = "<group>";
+		};
+		E70AE8292020F3D600143ACF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E70AE82A2020F3EB00143ACF /* WaiterViewController.swift */,
+				E70AE82C2020F3F500143ACF /* ShiftViewController.swift */,
+				E70AE82E2020F41400143ACF /* AddWaiterViewController.swift */,
+				E70AE8302020F42000143ACF /* AddShitViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E70AE8102020EF1B00143ACF /* StaffManagement-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E70AE8262020EF1B00143ACF /* Build configuration list for PBXNativeTarget "StaffManagement-Swift" */;
+			buildPhases = (
+				E70AE80D2020EF1B00143ACF /* Sources */,
+				E70AE80E2020EF1B00143ACF /* Frameworks */,
+				E70AE80F2020EF1B00143ACF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StaffManagement-Swift";
+			productName = "StaffManagement-Swift";
+			productReference = E70AE8112020EF1B00143ACF /* StaffManagement-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E70AE8092020EF1B00143ACF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Mayara Felix";
+				TargetAttributes = {
+					E70AE8102020EF1B00143ACF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E70AE80C2020EF1B00143ACF /* Build configuration list for PBXProject "StaffManagement-Swift" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E70AE8082020EF1B00143ACF;
+			productRefGroup = E70AE8122020EF1B00143ACF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E70AE8102020EF1B00143ACF /* StaffManagement-Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E70AE80F2020EF1B00143ACF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E70AE8222020EF1B00143ACF /* LaunchScreen.storyboard in Resources */,
+				E70AE81F2020EF1B00143ACF /* Assets.xcassets in Resources */,
+				E70AE81A2020EF1B00143ACF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E70AE80D2020EF1B00143ACF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E70AE82F2020F41400143ACF /* AddWaiterViewController.swift in Sources */,
+				E70AE82B2020F3EB00143ACF /* WaiterViewController.swift in Sources */,
+				E70AE8172020EF1B00143ACF /* ViewController.swift in Sources */,
+				E70AE8312020F42000143ACF /* AddShitViewController.swift in Sources */,
+				E70AE81D2020EF1B00143ACF /* StaffManagement_Swift.xcdatamodeld in Sources */,
+				E70AE8152020EF1B00143ACF /* AppDelegate.swift in Sources */,
+				E70AE82D2020F3F600143ACF /* ShiftViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E70AE8182020EF1B00143ACF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E70AE8192020EF1B00143ACF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E70AE8202020EF1B00143ACF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E70AE8212020EF1B00143ACF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E70AE8242020EF1B00143ACF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E70AE8252020EF1B00143ACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E70AE8272020EF1B00143ACF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "StaffManagement-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mayarafelix.StaffManagement-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E70AE8282020EF1B00143ACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "StaffManagement-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mayarafelix.StaffManagement-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E70AE80C2020EF1B00143ACF /* Build configuration list for PBXProject "StaffManagement-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E70AE8242020EF1B00143ACF /* Debug */,
+				E70AE8252020EF1B00143ACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E70AE8262020EF1B00143ACF /* Build configuration list for PBXNativeTarget "StaffManagement-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E70AE8272020EF1B00143ACF /* Debug */,
+				E70AE8282020EF1B00143ACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E70AE81B2020EF1B00143ACF /* StaffManagement_Swift.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E70AE81C2020EF1B00143ACF /* StaffManagement_Swift.xcdatamodel */,
+			);
+			currentVersion = E70AE81C2020EF1B00143ACF /* StaffManagement_Swift.xcdatamodel */;
+			path = StaffManagement_Swift.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E70AE8092020EF1B00143ACF /* Project object */;
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Restaurant" representedClassName="Restaurant" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="waiter" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Waiter" inverseName="restaurant" inverseEntity="Waiter" syncable="YES"/>
+    </entity>
+    <entity name="Shift" representedClassName="Shift" syncable="YES" codeGenerationType="class">
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="end_time" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="start_time" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="waiter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Waiter" inverseName="shift" inverseEntity="Waiter" syncable="YES"/>
+    </entity>
+    <entity name="Waiter" representedClassName="Waiter" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="restaurant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Restaurant" inverseName="waiter" inverseEntity="Restaurant" syncable="YES"/>
+        <relationship name="shift" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Shift" inverseName="waiter" inverseEntity="Shift" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Restaurant" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Shift" positionX="-36" positionY="9" width="128" height="105"/>
+        <element name="Waiter" positionX="-54" positionY="-9" width="128" height="90"/>
+    </elements>
+</model>
