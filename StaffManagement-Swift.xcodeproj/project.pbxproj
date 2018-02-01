@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7091BFF2023A0CB00ED800E /* Restaurant+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7091BFD2023A0CB00ED800E /* Restaurant+CoreDataClass.swift */; };
+		E7091C002023A0CB00ED800E /* Restaurant+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7091BFE2023A0CB00ED800E /* Restaurant+CoreDataProperties.swift */; };
+		E7091C032023A0DB00ED800E /* Waiter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7091C012023A0DB00ED800E /* Waiter+CoreDataClass.swift */; };
+		E7091C042023A0DB00ED800E /* Waiter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7091C022023A0DB00ED800E /* Waiter+CoreDataProperties.swift */; };
+		E7091C072023A0EF00ED800E /* Shift+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7091C052023A0EF00ED800E /* Shift+CoreDataClass.swift */; };
+		E7091C082023A0EF00ED800E /* Shift+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7091C062023A0EF00ED800E /* Shift+CoreDataProperties.swift */; };
+		E7091C0A2023A18800ED800E /* RestaurantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7091C092023A18800ED800E /* RestaurantManager.swift */; };
+		E7091C0C2023A1CD00ED800E /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7091C0B2023A1CD00ED800E /* PersistenceService.swift */; };
 		E70AE8152020EF1B00143ACF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AE8142020EF1B00143ACF /* AppDelegate.swift */; };
 		E70AE8172020EF1B00143ACF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AE8162020EF1B00143ACF /* ViewController.swift */; };
 		E70AE81A2020EF1B00143ACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70AE8182020EF1B00143ACF /* Main.storyboard */; };
@@ -20,6 +28,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E7091BFD2023A0CB00ED800E /* Restaurant+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Restaurant+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E7091BFE2023A0CB00ED800E /* Restaurant+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Restaurant+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E7091C012023A0DB00ED800E /* Waiter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Waiter+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E7091C022023A0DB00ED800E /* Waiter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Waiter+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E7091C052023A0EF00ED800E /* Shift+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shift+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E7091C062023A0EF00ED800E /* Shift+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shift+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E7091C092023A18800ED800E /* RestaurantManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantManager.swift; sourceTree = "<group>"; };
+		E7091C0B2023A1CD00ED800E /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		E70AE8112020EF1B00143ACF /* StaffManagement-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StaffManagement-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70AE8142020EF1B00143ACF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E70AE8162020EF1B00143ACF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +61,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7091BFC2023A0B600ED800E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E70AE81B2020EF1B00143ACF /* StaffManagement_Swift.xcdatamodeld */,
+				E7091C0B2023A1CD00ED800E /* PersistenceService.swift */,
+				E7091C052023A0EF00ED800E /* Shift+CoreDataClass.swift */,
+				E7091C062023A0EF00ED800E /* Shift+CoreDataProperties.swift */,
+				E7091C012023A0DB00ED800E /* Waiter+CoreDataClass.swift */,
+				E7091C022023A0DB00ED800E /* Waiter+CoreDataProperties.swift */,
+				E7091BFD2023A0CB00ED800E /* Restaurant+CoreDataClass.swift */,
+				E7091BFE2023A0CB00ED800E /* Restaurant+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		E70AE8082020EF1B00143ACF = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +95,7 @@
 		E70AE8132020EF1B00143ACF /* StaffManagement-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				E7091BFC2023A0B600ED800E /* CoreData */,
 				E70AE8292020F3D600143ACF /* ViewControllers */,
 				E70AE8142020EF1B00143ACF /* AppDelegate.swift */,
 				E70AE8162020EF1B00143ACF /* ViewController.swift */,
@@ -71,7 +103,7 @@
 				E70AE81E2020EF1B00143ACF /* Assets.xcassets */,
 				E70AE8202020EF1B00143ACF /* LaunchScreen.storyboard */,
 				E70AE8232020EF1B00143ACF /* Info.plist */,
-				E70AE81B2020EF1B00143ACF /* StaffManagement_Swift.xcdatamodeld */,
+				E7091C092023A18800ED800E /* RestaurantManager.swift */,
 			);
 			path = "StaffManagement-Swift";
 			sourceTree = "<group>";
@@ -160,11 +192,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E70AE82F2020F41400143ACF /* AddWaiterViewController.swift in Sources */,
+				E7091C032023A0DB00ED800E /* Waiter+CoreDataClass.swift in Sources */,
+				E7091C072023A0EF00ED800E /* Shift+CoreDataClass.swift in Sources */,
 				E70AE82B2020F3EB00143ACF /* WaiterViewController.swift in Sources */,
 				E70AE8172020EF1B00143ACF /* ViewController.swift in Sources */,
 				E70AE8312020F42000143ACF /* AddShitViewController.swift in Sources */,
 				E70AE81D2020EF1B00143ACF /* StaffManagement_Swift.xcdatamodeld in Sources */,
+				E7091C042023A0DB00ED800E /* Waiter+CoreDataProperties.swift in Sources */,
 				E70AE8152020EF1B00143ACF /* AppDelegate.swift in Sources */,
+				E7091C002023A0CB00ED800E /* Restaurant+CoreDataProperties.swift in Sources */,
+				E7091C0C2023A1CD00ED800E /* PersistenceService.swift in Sources */,
+				E7091BFF2023A0CB00ED800E /* Restaurant+CoreDataClass.swift in Sources */,
+				E7091C082023A0EF00ED800E /* Shift+CoreDataProperties.swift in Sources */,
+				E7091C0A2023A18800ED800E /* RestaurantManager.swift in Sources */,
 				E70AE82D2020F3F600143ACF /* ShiftViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
