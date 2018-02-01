@@ -11,17 +11,23 @@ import CoreData
 
 class WaiterViewController: UITableViewController {
 
-    var restaurant = Restaurant()
+    var restaurant: Restaurant?
     var waiters = [Waiter]()
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        self.addRestaurant() // If no restaurant, add one
         
-        // If no restaurant, add one
-        self.addRestaurant()
+        if let restaurant = self.restaurant
+        {
+            self.title = restaurant.name
+        }
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool)
+    {
         self.updateTable()
     }
 
@@ -48,12 +54,34 @@ class WaiterViewController: UITableViewController {
         return UITableViewCell()
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if (editingStyle == UITableViewCellEditingStyle.delete)
+        {
+            if waiters.count > 0
+            {
+                let waiter = waiters[indexPath.row]
+                WaiterManager.delete(name: waiter.name!)
+                self.updateTable()
+            }
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.identifier == "NewWaiterSegue"
         {
             let vc = segue.destination as! AddWaiterViewController
             vc.restaurant = self.restaurant
+        }
+        else if segue.identifier == "ShiftSegue"
+        {
+            let vc = segue.destination as! ShiftViewController
+            
+            if let selectedIndex = self.tableView.indexPathForSelectedRow?.row
+            {
+                vc.waiter = waiters[selectedIndex]
+            }
         }
     }
     
@@ -82,8 +110,6 @@ class WaiterViewController: UITableViewController {
         {
             restaurant = restaurants[0]
         }
-        
-        print("Restaurant Name: \(restaurant.name!)")
     }
 
 }

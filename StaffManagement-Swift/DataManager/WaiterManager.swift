@@ -39,8 +39,13 @@ class WaiterManager
             
             for waiter in result
             {
-                PersistenceService.context.delete(waiter)
-                PersistenceService.saveContext()
+                // Delete Shifts
+                if ShiftManager.deleteAll(waiter: waiter)
+                {
+                    // Delete Waiter
+                    PersistenceService.context.delete(waiter)
+                    PersistenceService.saveContext()
+                }
             }
             
             return true

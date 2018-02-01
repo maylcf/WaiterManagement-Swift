@@ -2,6 +2,7 @@ import UIKit
 
 class AddShitViewController: UIViewController
 {
+    var waiter: Waiter?
     let weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     var selectedDay: String?
     
@@ -12,21 +13,22 @@ class AddShitViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-    }
-
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
+        self.selectedDay = weekDays[0]
     }
     
     @IBAction func saveButtonTapped()
     {
-        let startTime = startTimePickerView.date
-        let endTime = endTimePickerView.date
-        
-        print("Selected Day:" + selectedDay!)
-        // Add Shift
+        if let waiter = waiter
+        {
+            let startTime = startTimePickerView.date
+            let endTime = endTimePickerView.date
+            
+            guard let day = selectedDay else { return }
+            
+            ShiftManager.add(waiter: waiter, day: day, startTime: startTime, endTime: endTime)
+            navigationController?.popViewController(animated: true)
+            
+        }
     }
     
     @IBAction func cancelButtonTapped()
