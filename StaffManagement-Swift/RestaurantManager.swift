@@ -51,17 +51,34 @@ class RestaurantManager
     public class func selectAll() -> [Restaurant]?
     {
         let fetchRequest: NSFetchRequest<Restaurant> = Restaurant.fetchRequest()
-        var restaurants = [Restaurant]()
+        var results = [Restaurant]()
         
         do
         {
-            restaurants = try PersistenceService.context.fetch(fetchRequest)
+            results = try PersistenceService.context.fetch(fetchRequest)
         }
         catch
         {
             return nil
         }
         
-        return restaurants
+        return results
+    }
+    
+    // Get the number of restaurants
+    public class func count() -> Int
+    {
+        let fetchRequest: NSFetchRequest<Restaurant> = Restaurant.fetchRequest()
+        var results = [Restaurant]()
+        
+        do
+        {
+            results = try PersistenceService.context.fetch(fetchRequest)
+            return results.count
+        }
+        catch
+        {
+            return 0
+        }
     }
 }

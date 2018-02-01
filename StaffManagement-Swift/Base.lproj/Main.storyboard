@@ -103,7 +103,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="aqD-hq-WQg" kind="show" id="5qt-td-09y"/>
+                                    <segue destination="aqD-hq-WQg" kind="show" id="sFR-u7-ss8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -115,7 +115,7 @@
                     <navigationItem key="navigationItem" id="QCi-9i-szZ">
                         <barButtonItem key="rightBarButtonItem" title="Add Waiter" id="t7d-j2-xnv">
                             <connections>
-                                <segue destination="aqD-hq-WQg" kind="show" id="e3n-yK-lCl"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="NewWaiterSegue" id="Is0-6K-rvD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -283,7 +283,4 @@
             <point key="canvasLocation" x="-382" y="594"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="e3n-yK-lCl"/>
-    </inferredMetricsTieBreakers>
 </document>
