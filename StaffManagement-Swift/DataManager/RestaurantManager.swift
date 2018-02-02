@@ -81,4 +81,24 @@ class RestaurantManager
             return 0
         }
     }
+    
+    public static func getRestaurant() -> Restaurant?
+    {
+        if (self.count() == 0)
+        {
+            let actionResult = self.addRestaurant(restaurantName: "TouchBistro")
+            
+            if actionResult.error
+            {
+                return nil
+            }
+        }
+        
+        if let restaurants = self.selectAll()
+        {
+            return restaurants[0]
+        }
+        
+        return nil
+    }
 }

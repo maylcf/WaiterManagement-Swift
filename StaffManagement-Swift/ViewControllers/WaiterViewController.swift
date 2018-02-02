@@ -17,13 +17,18 @@ class WaiterViewController: UITableViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.addRestaurant() // If no restaurant, add one
+        //self.addRestaurant() // If no restaurant, add one
+        
+        restaurant = RestaurantManager.getRestaurant()
         
         if let restaurant = self.restaurant
         {
             self.title = restaurant.name
         }
-        
+        else
+        {
+            MessageManager.displayErrorMessage(vc: self, message: "Error retrieving restaurant")
+        }
     }
     
     override func viewDidAppear(_ animated: Bool)
@@ -108,22 +113,22 @@ class WaiterViewController: UITableViewController {
         }
     }
     
-    func addRestaurant()
-    {
-        if (RestaurantManager.count() == 0)
-        {
-            let addRestaurant = RestaurantManager.addRestaurant(restaurantName: "Mays's Burguer")
-            
-            if addRestaurant.error
-            {
-                MessageManager.displayErrorMessage(vc: self, message: addRestaurant.message)
-            }
-        }
-        
-        if let restaurants = RestaurantManager.selectAll()
-        {
-            restaurant = restaurants[0]
-        }
-    }
+//    func addRestaurant()
+//    {
+//        if (RestaurantManager.count() == 0)
+//        {
+//            let actionResult = RestaurantManager.addRestaurant(restaurantName: "TouchBistro")
+//
+//            if actionResult.error
+//            {
+//                MessageManager.displayErrorMessage(vc: self, message: actionResult.message)
+//            }
+//        }
+//
+//        if let restaurants = RestaurantManager.selectAll()
+//        {
+//            restaurant = restaurants[0]
+//        }
+//    }
 
 }
